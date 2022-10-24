@@ -3,12 +3,13 @@
 <div class="row align-items-md-stretch">
     <div class="col-md-6">
         <div class="h-100 p-5 text-white bg-primary border rounded-3">
-            <h2>Bienvenido al administrador de libros</h2>
+            <h2>Bienvenid@ <strong>{{session['usuario']}}</strong> al administrador de libros</h2>
             <p>Aqui puede empezar a editar los libros...</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="/libros" role="button"> Editar Libros</a>
-            </p>
+
         </div>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/admin/libros" role="button"> Editar Libros</a>
+        </p>
     </div>
     
 </div>

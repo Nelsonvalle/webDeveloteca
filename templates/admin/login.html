@@ -21,12 +21,19 @@
             </div>
             <div class="col-md-4">
                 <br>
+                {% if mensaje %}
+                  <div class="alert alert-danger" role="alert">
+                    <strong>{{mensaje}}</strong> 
+                  </div>
+                  
+
+                {% endif %}
                 <div class="card">
                     <div class="card-header">
                         Inicio de sesion
                     </div>
                     <div class="card-body">
-                        <form action="admin/login" method="post">
+                        <form action="/admin/login" method="post">
                             <div class="mb-3">
                               <label for="txtUsuario" class="form-label">Usuario</label>
                               <input type="text"
@@ -35,7 +42,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="txtContraseña" class="form-label">Contraseña</label>
-                                <input type="text"
+                                <input type="password"
                                   class="form-control" name="txtContraseña" id="txtContraseña" aria-describedby="helpId"
                                    placeholder="Ingrese su contraseña">    
                             </div>
